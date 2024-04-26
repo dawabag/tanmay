@@ -19,12 +19,17 @@
             display: flex; /* Use flexbox to center the buttons vertically */
             justify-content: center; /* Center the buttons horizontally */
             align-items: center; /* Center the buttons vertically */
+            position: relative; /* Set position relative for absolute positioning */
+        }
+
+        .modal-buttons-container {
+            background-color: rgba(255, 255, 255, 0.5); /* Translucent background */
+            border-radius: 10px;
+            padding: 20px; /* Add padding for spacing */
+            text-align: center; /* Center the buttons horizontally */
         }
 
         .modal-buttons {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -46,13 +51,15 @@
 </head>
 
 <body>
-    <!-- Modal Buttons -->
-    <div class="modal-buttons">
-        <button id="openModalButton" class="modal-button">3D Walkthrough</button>
-        <button id="openModalButton2" class="modal-button">3D Walkthrough 2</button>
-        <button id="openModalButton3" class="modal-button">3D Walkthrough 3</button>
-        <button id="openModalButton4" class="modal-button">3D Walkthrough 4</button>
-        <button id="openModalButton5" class="modal-button">3D Walkthrough 5</button>
+    <!-- Modal Buttons Container -->
+    <div class="modal-buttons-container">
+        <div class="modal-buttons">
+            <button id="openModalButton" class="modal-button">3D Walkthrough</button>
+            <button id="openModalButton2" class="modal-button">3D Walkthrough 2</button>
+            <button id="openModalButton3" class="modal-button">3D Walkthrough 3</button>
+            <button id="openModalButton4" class="modal-button">3D Walkthrough 4</button>
+            <button id="openModalButton5" class="modal-button">3D Walkthrough 5</button>
+        </div>
     </div>
 
     <!-- Modal -->
