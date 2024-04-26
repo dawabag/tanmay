@@ -7,13 +7,53 @@
     <title>Website Modal</title>
     <!-- Include Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* CSS */
+        body {
+            background-image: url('6.jpeg');
+            background-size: cover; /* Ensure the background image covers the entire screen */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Prevent the background image from repeating */
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Ensure the body fills the viewport height */
+            display: flex; /* Use flexbox to center the buttons vertically */
+            justify-content: center; /* Center the buttons horizontally */
+            align-items: center; /* Center the buttons vertically */
+        }
+
+        .modal-buttons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .modal-button {
+            background-color: #3B82F6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-button:hover {
+            background-color: #2563EB;
+        }
+    </style>
 </head>
 
-<body class="bg-cover" style="background-image: url('6.jpeg');">
-    <!-- Button to open modal -->
-    <button id="openModalButton" class="fixed bottom-10 right-10 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">
-        3D Walkthrough
-    </button>
+<body>
+    <!-- Modal Buttons -->
+    <div class="modal-buttons">
+        <button id="openModalButton" class="modal-button">3D Walkthrough</button>
+        <button id="openModalButton2" class="modal-button">3D Walkthrough 2</button>
+        <button id="openModalButton3" class="modal-button">3D Walkthrough 3</button>
+        <button id="openModalButton4" class="modal-button">3D Walkthrough 4</button>
+        <button id="openModalButton5" class="modal-button">3D Walkthrough 5</button>
+    </div>
 
     <!-- Modal -->
     <div id="websiteModal" class="fixed top-0 left-0 w-full h-full flex justify-center items-center bg-black bg-opacity-75 hidden">
@@ -35,6 +75,10 @@
     <!-- JavaScript to handle modal functionality -->
     <script>
         const openModalButton = document.getElementById('openModalButton');
+        const openModalButton2 = document.getElementById('openModalButton2');
+        const openModalButton3 = document.getElementById('openModalButton3');
+        const openModalButton4 = document.getElementById('openModalButton4');
+        const openModalButton5 = document.getElementById('openModalButton5');
         const websiteModal = document.getElementById('websiteModal');
         const closeModalButton = document.getElementById('closeModalButton');
         const websiteIframe = document.getElementById('websiteIframe');
@@ -56,6 +100,22 @@
             openModal();
         });
 
+        openModalButton2.addEventListener('click', () => {
+            openModal();
+        });
+
+        openModalButton3.addEventListener('click', () => {
+            openModal();
+        });
+
+        openModalButton4.addEventListener('click', () => {
+            openModal();
+        });
+
+        openModalButton5.addEventListener('click', () => {
+            openModal();
+        });
+
         // Event listener for close modal button
         closeModalButton.addEventListener('click', () => {
             closeModal();
@@ -68,6 +128,7 @@
             }
         });
     </script>
+
 </body>
 
 </html>
